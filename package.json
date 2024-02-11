@@ -1,0 +1,16 @@
+{
+  "name": "bun-create-vite",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/connect": "^3.4.38"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "connect": "^3.7.0",
+    "picocolors": "^1.0.0"
+  }
+}
