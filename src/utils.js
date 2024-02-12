@@ -1,4 +1,18 @@
 import path from "path";
+import fs from "fs";
+
+const modules = ["lodash-es/has.js", "lodash-es/join.js", "dayjs"];
+
+export const getEntryPoint = (module) => {
+    if (!module.endsWith(".js")) {
+        const package_file = `./node_modules/${module}/package.json`;
+        const content = fs.readFileSync(package_file, "utf-8");
+        const result = JSON.parse(content);
+        
+        return `${module}/${result.main}`;
+    }
+    return module;
+}
 
 const ConentTypesMap = {
     html: "text/html",

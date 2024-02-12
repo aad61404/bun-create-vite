@@ -1,6 +1,6 @@
 {
   "name": "bun-create-vite",
-  "module": "index.ts",
+  "module": "index.js",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
@@ -9,8 +9,15 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
+  "scripts": {
+    "dev": "bun run index.js",
+    "watch": "bun run --watch index.js"
+  },
   "dependencies": {
+    "chokidar": "^3.6.0",
     "connect": "^3.7.0",
+    "dayjs": "^1.11.10",
+    "lodash-es": "^4.17.21",
     "picocolors": "^1.0.0"
   }
 }
